@@ -45,7 +45,7 @@ async def start_handler(message: types.Message):
     user_data = await bot.send_dice(user_id)
     user_data = user_data['dice']['value']
 
-    await sleep(1)
+    await sleep(3)
     if bot_data > user_data:
         await bot.send_message(user_id, 'ИДИ НА ПАРЫ, ЛУЗЕР!')
     else:
