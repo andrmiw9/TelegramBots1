@@ -1,14 +1,17 @@
 import telebot
-
+from dotenv import load_dotenv
 ##!/usr/bin/python
 
 # This is a simple echo bot using the decorator mechanism.
 # It echoes any incoming text messages.
 
+res = load_dotenv('venv\.env')
+if res:
+    print('yep')
+else:
+    print('no')
 
-API_TOKEN = '5692916689:AAG3vP1plUJUS4vcuVSmkfk7pH17E3eICgY'
-
-bot = telebot.TeleBot(API_TOKEN)
+bot = telebot.TeleBot(os.environ['BOT_TOKEN'])
 
 
 # Handle '/start' and '/help'
